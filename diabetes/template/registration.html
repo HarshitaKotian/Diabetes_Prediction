@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+    <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}" type="text/css">
+</head>
+<body  class="bg-info bg-gradient">
+    <h1 class="text-decoration-underline text-center mt-4">The diabetes checking application</h1>
+
+    <div class="container">
+        <div class="row justify-content-center">
+    <div class="col-4"></div>
+    <div class="col-4"></div>
+    <div class="col-4">
+        <div class="card mt-5">
+            <div class="card-body">
+        <form action="/saveuser/" method="post" class="">
+            {% csrf_token %}
+            <h1>REGISTER HERE</h1>
+            <br>
+            <input type="text" name="username"  class="form-group form-control bg-info bg-gradient form-outline form-white" placeholder="Enter username"><br>
+            <input type="password" name="password" value="password" class="form-group form-control bg-info bg-gradient" placeholder="Enter password"><br>
+            <input type="text" name="name" id="name" class="form-group form-control bg-info bg-gradient" placeholder="Enter name"><br>
+            <input type="tel" name="phone"  class="form-group form-control bg-info bg-gradient" placeholder="Enter phone number"><br>
+            <input type="email" name="email"  class="form-group form-control bg-info bg-gradient" placeholder="Enter email"><br>
+            <textarea name="address" id="" cols="3" rows="3" class="form-group form-control bg-info bg-gradient" placeholder="Enter address"></textarea><br>
+            <button type="submit" class="btn btn-warning form-control">REGISTER</button>
+        </form>
+    </div>
+    </div>
+    </div>
+</div>
+</div>
+</body>
+</html>

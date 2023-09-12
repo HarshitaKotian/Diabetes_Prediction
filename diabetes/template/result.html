@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}" type="text/css">
+    <style>
+        .card {
+            align-items: center;
+            padding-top: 20px;
+        }
+
+        .button-home {
+            width: 100%;
+
+            align-items: center;
+        }
+    </style>
+    <title>Result</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center" style="margin: 10px;">Result:</h1>
+
+        <div class="card" style="width: 50%; margin: auto;height: 100px;margin-top: 40px;">
+            {% if result == "You are normal" %}
+            <h1 class="text-success">{{ result }}</h1>
+            {% endif %}
+            {% if result == "You have diabetes" %}
+            <h1 class="text-danger">{{ result }}</h1>
+            {% endif %}
+        </div>
+    </div>
+    <div class="button-home my-3">
+        <center><button class="btn btn-dark"><a href="/home/" target="_blank" rel="noopener noreferrer" class="text-light">BACK TO
+                    HOME</a></button></center>
+    </div>
+
+
+</body>
+
+</html>

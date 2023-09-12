@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}" type="text/css">
+
+</head>
+
+<body class="bg-info">
+    <h1 class="text-decoration-underline text-center mt-4">The diabetes checking application</h1>
+    <div class="container" >
+        <div class="row justify-content-center">
+            <div class="col-4"></div>
+            <div class="col-4 p-3 mb-2 text-white">
+                <div class="card mt-5">
+                    <div class="card-body">
+                        <h1 class="card-title text-center">LOGIN FORM</h1>
+                        <form action="/userlogin/" method="post">
+                            {% csrf_token %}
+                            <input type="text" name="username" class="form-group form-control"
+                                placeholder="Enter username"><br>
+                            <input type="password" name="password" value="password" class="form-group form-control"><br>
+                            <button type="submit" class="btn btn-primary form-control">LOGIN</button><br><br>
+                            <a href="/registration/" class="btn btn-primary bg-warning form-control">New user?</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4"></div>
+        </div>
+    </div>
+</body>
+
+</html>

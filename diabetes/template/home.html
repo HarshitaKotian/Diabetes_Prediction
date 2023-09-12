@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}" type="text/css">
+
+    <title>Document</title>
+</head>
+<body class="bg-info">
+    <h1 class="text-center my-3">THE DIABETES CHECKING APP</h1>
+    <div class="container">
+        <div class="row">
+    <div class="col-3"></div>
+        <div class="col-6">
+            <form action="/check_diabetes/" method="post">
+                {% csrf_token %}
+                <input type="text" name="pregnancies" class="form-group form-control bg-light" placeholder="Enter pregancies value"><br>
+                <input type="text" name="glucose" class="form-group form-control bg-light" placeholder="Enter glucose value"><br>
+                <input type="text" name="bloodpressure" class="form-group form-control bg-light" placeholder="Enter bloodpressure value"><br>
+                <input type="text" name="skinthickness" class="form-group form-control bg-light" placeholder="Enter skin thickness value"><br>
+                <input type="text" name="insulin" class="form-group form-control bg-light" placeholder="Enter insulin value"><br>
+                <input type="text" name="bmi" class="form-group form-control bg-light" placeholder="Enter BMI value"><br>
+                <input type="text" name="dpf" class="form-group form-control bg-light" placeholder="Enter diabtes pedigree value"><br>
+                <input type="text" name="age" class="form-group form-control bg-light" placeholder="Enter age"><br>
+                <button type="submit" class="btn btn-primary bg-warning form-control">CHECK DIABETES</button>
+            </form>
+        </div>
+        <div class="col-3"></div> 
+    </div>
+</div>
+</body>
+</html>
